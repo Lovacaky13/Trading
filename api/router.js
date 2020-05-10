@@ -25,7 +25,11 @@ const HomePage = require('./controllers/pages/HomePage'),
     Atelier = require('./controllers/pages/Atelier'),
     AtelierSingle = require('./controllers/pages/AtelierSingle'),
     CookieControllers = require('./controllers/CookieControllers'),
-    CustomerControllers = require('./controllers/CustomerControllers')
+    CustomerControllers = require('./controllers/CustomerControllers'),
+    Net89 = require('./controllers/pages/Net89'),
+    Elitrob = require('./controllers/pages/Elitrob'),
+    Crushtip = require('./controllers/pages/Crushtip'),
+    Antares = require('./controllers/pages/Antares')
 
 /* Import middlewares
  *******************/
@@ -38,15 +42,34 @@ const isAdmin = require('./Middleware/isAdmin'),
 
 //  Controller Page
 router.route('/')
-    .get(HomePage.getArticle)
+    .get(HomePage.get)
+
+router.route('/Net89')
+    .get(Net89.get)
+
+router.route('/Elitrob')
+    .get(Elitrob.get)
+
+router.route('/Crushtip')
+    .get(Crushtip.get)
+
+router.route('/Antares')
+    .get(Antares.get)
+
+
+
 router.route('/Agenda')
     .get(isAdmin, Agenda.get)
+
 router.route('/Calcul')
     .get(Calcul.get)
+
 router.route('/InfoAsg')
     .get(InfoAsg.get)
+
 router.route('/SendMail')
     .get(SendMail.get)
+
 router.route('/VerifMail')
     .get(VerifMail.get)
 
