@@ -22,7 +22,7 @@
     },
     "homepage": "https://github.com/Arinfo-Dev-Allonnes/trot-go#readme",
     "dependencies": {
-        "bcrypt": "^4.0.0",
+        "bcrypt": "^5.0.0",
         "bootstrap": "^4.4.1",
         "ckeditor4": "^4.14.0",
         "connect-flash": "^0.1.1",
